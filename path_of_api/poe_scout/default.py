@@ -20,7 +20,7 @@ class Default:
         self.sub_url = sub_url
         self.timeout = timeout
                  
-    def check_live(self):
+    def check_live(self) -> LiveResponse:
         endpoint = "/live"
         try:
             resp = requests.get(self.base_url + self.sub_url + endpoint, timeout=self.timeout)
@@ -29,7 +29,7 @@ class Default:
             raise e
         
     
-    def check_ready(self):
+    def check_ready(self) -> ReadyResponse:
         endpoint = "/ready"
         try:
             resp = requests.get(self.base_url + self.sub_url + endpoint, timeout=self.timeout)
