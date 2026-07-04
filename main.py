@@ -1,4 +1,4 @@
-from path_of_api.poe_scout.main import Poe2ScoutAPI
+from path_of_apis.poe_scout.api import Poe2ScoutAPI
 
 GREEN = "\033[92m"
 RED = "\033[91m"
